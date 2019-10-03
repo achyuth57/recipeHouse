@@ -25,7 +25,7 @@ h2::after {
 }
 .carousel .item {
   color: #747d89;
-  min-height: 325px;
+  min-height: 350px;
   text-align: center;
   overflow: hidden;
 }
@@ -35,8 +35,9 @@ h2::after {
   border-radius: 6px;
   text-align: center;
   position: relative;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-  min-height: 350px;
+  box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  margin-top: 10px;
 }
 .carousel .item .img-box {
   height: 120px;
@@ -55,12 +56,22 @@ h2::after {
   right: 0;
 }
 .carousel .item h4 {
-  font-size: 18px;
+  font-size: 14px;
 }
+
+.carousel-item .row.display-flex {
+  display: flex;
+  flex-direction: row;
+}
+
 .carousel .item h4,
 .carousel .item p,
 .carousel .item ul {
   margin-bottom: 5px;
+}
+.carousel .thumb-content {
+  min-height: 130px;
+  position: relative;
 }
 .carousel .thumb-content .btn {
   color: #7ac400;
@@ -73,6 +84,12 @@ h2::after {
   margin-top: 5px;
   line-height: 16px;
   border-radius: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 70%;
+  margin: auto;
+  bottom: 0;
 }
 .carousel .thumb-content .btn:hover,
 .carousel .thumb-content .btn:focus {
@@ -126,6 +143,17 @@ h2::after {
 }
 .carousel .carousel-indicators {
   bottom: -50px;
+}
+.carousel-item .row {
+  display: flex;
+}
+.carousel-item .row + div {
+  flex: 1; /* additionally, equal width */
+  padding: 1em;
+  border: solid;
+}
+.carousel-inner .row {
+  margin: 0;
 }
 .carousel-indicators li,
 .carousel-indicators li.active {

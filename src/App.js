@@ -1,42 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 import TopNav from "./components/TopNav";
 import Footer from "./components/footer/Footer";
+import { BrowserRouter as Router } from "react-router-dom";
+import MainContainer from "./components/ContentHolder";
+import { AuthProvider } from "./AuthContext/AuthContext";
 
-import FireConnection from "./firebase";
+const App = () => {
+  return (
+    <div>
+      <AuthProvider>
+        <Router basename={process.env.PUBLIC_URL}>
+          <TopNav />
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { authenticated: false, user: null };
-  }
-  componentDidMount() {
-    FireConnection.auth().onAuthStateChanged(authenticated => {
-      const user = authenticated
-        ? FireConnection.auth().currentUser.email.split("@")[0]
-        : "";
+          <MainContainer />
 
-      //console.log(user);
-      authenticated
-        ? this.setState({
-            authenticated: true,
-            user: user
-          })
-        : this.setState({ authenticated: false });
-    });
-  }
-  render() {
-    // return <Firetest />;
-    return (
-      <div>
-        <TopNav
-          authenticated={this.state.authenticated}
-          user={this.state.user}
-        />
-
-        <Footer />
-      </div>
-    );
-  }
-}
+          <Footer />
+        </Router>
+      </AuthProvider>
+    </div>
+  );
+};
 
 export default App;

@@ -1,19 +1,23 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Redirect, Link } from "react-router-dom";
 import "../../styles/register.css";
+import { AuthContext } from "../../AuthContext/AuthContext";
 
 import FireConnection from "../../firebase";
 
 class Login extends Component {
+  static contextType = AuthContext;
+
   constructor(props) {
     super(props);
-
     this.state = {
       username: "",
       password: "",
-      error: null
+      error: null,
+      redirectToReferrer: false
     };
   }
+
   changeHandler = e => {
     this.setState({
       [e.target.name]: e.target.value
@@ -22,10 +26,10 @@ class Login extends Component {
   formSubmit = e => {
     e.preventDefault();
     const { username, password } = this.state;
-    FireConnection.auth()
+    const userFetch = FireConnection.auth();
+    userFetch
       .signInWithEmailAndPassword(username, password)
       .then(user => {
-        console.log(user);
         this.props.history.push("/");
       })
       .catch(error => {
@@ -34,12 +38,27 @@ class Login extends Component {
         });
       });
   };
+
   render() {
     const { username, password, error } = this.state;
     const isInvalid = password === "" || username === "";
+
+    if (this.context.currentUser) {
+      return <Redirect to="/" />;
+    }
     return (
       <div>
-        <div className="legend">{error ? <h4>{error.message}</h4> : null}</div>
+        {this.props.location.message && (
+          <div className="alert alert-warning text-center">
+            <strong>Warning!</strong> {this.props.location.message}
+          </div>
+        )}
+        {this.state.error && (
+          <div className="alert alert-danger text-center">
+            <strong>Login Error!</strong> {error.message}
+          </div>
+        )}
+
         <div className="signup-form">
           <form onSubmit={this.formSubmit} method="post">
             <h2>Login to Your Account</h2>
@@ -93,8 +112,8 @@ class Login extends Component {
             </div>
           </form>
           <div className="text-center">
-            Don't have an account?{" "}
-            <a href="javascript:void();">Register here</a>
+            Don't have an account?
+            <Link to="/register"> Register here</Link>
           </div>
         </div>
       </div>

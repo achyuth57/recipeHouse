@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -9,139 +10,139 @@ function Footer() {
           <div className="row text-center text-xs-center text-sm-left text-md-left">
             <div className="col-xs-12 col-sm-4 col-md-4">
               <h5>Quick links</h5>
-              {/* <ul className="list-unstyled quick-links">
+              <ul className="list-unstyled quick-links">
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="/home">
                     <i className="fa fa-angle-double-right" />
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="/about">
                     <i className="fa fa-angle-double-right" />
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="/faq">
                     <i className="fa fa-angle-double-right" />
                     FAQ
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="/">
                     <i className="fa fa-angle-double-right" />
                     Get Started
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="/video">
                     <i className="fa fa-angle-double-right" />
                     Videos
-                  </a>
+                  </Link>
                 </li>
-              </ul> */}
+              </ul>
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4">
               <h5>Quick links</h5>
-              {/* <ul className="list-unstyled quick-links">
+              <ul className="list-unstyled quick-links">
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-angle-double-right" />
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-angle-double-right" />
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-angle-double-right" />
                     FAQ
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-angle-double-right" />
                     Get Started
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-angle-double-right" />
                     Videos
-                  </a>
+                  </Link>
                 </li>
-              </ul> */}
+              </ul>
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4">
               <h5>Quick links</h5>
-              {/* <ul className="list-unstyled quick-links">
+              <ul className="list-unstyled quick-links">
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-angle-double-right" />
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-angle-double-right" />
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-angle-double-right" />
                     FAQ
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-angle-double-right" />
                     Get Started
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" title="Design and developed by">
+                  <Link to="">
                     <i className="fa fa-angle-double-right" />
                     Imprint
-                  </a>
+                  </Link>
                 </li>
-              </ul> */}
+              </ul>
             </div>
           </div>
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-              {/* <ul className="list-unstyled list-inline social text-center">
+              <ul className="list-unstyled list-inline social text-center">
                 <li className="list-inline-item">
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-facebook" />
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-inline-item">
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-twitter" />
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-inline-item">
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-instagram" />
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-inline-item">
-                  <a href="javascript:void();">
+                  <Link to="">
                     <i className="fa fa-google-plus" />
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-inline-item">
-                  <a href="javascript:void();" target="_blank">
+                  <Link to="" target="_blank">
                     <i className="fa fa-envelope" />
-                  </a>
+                  </Link>
                 </li>
-              </ul> */}
+              </ul>
             </div>
             <hr />
           </div>
@@ -151,7 +152,7 @@ function Footer() {
                 ©2019 All right Reversed.
                 {/* <a className="text-green ml-2" href="#" target="_blank">
                   RecipesHouse.com
-                </a> */}
+                </Link> */}
               </p>
             </div>
             <hr />
