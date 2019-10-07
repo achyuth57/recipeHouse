@@ -8,11 +8,12 @@ import Login from "./login/Login";
 import About from "./about";
 import ViewRecipe from "./recipe/ViewRecipe";
 import ProtectedRoute from "./protectedRoutes/ProtectedRoute";
+import RegisterComponent from "./register/RegisterComponent";
 
 function MainContainer() {
   return (
     <React.Fragment>
-      <div className="container">
+      <div className="container-fluid" style={{ position: "relative" }}>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
@@ -20,6 +21,7 @@ function MainContainer() {
           <Route path="/recipes" component={Recipes} />
           <Route path="/Contact" component={Contact} />
           <Route path="/login" component={Login} />
+          <Route path="/register" component={RegisterComponent} />
           <ProtectedRoute path="/recipeView/:id" component={ViewRecipe} />} />
         </Switch>
       </div>

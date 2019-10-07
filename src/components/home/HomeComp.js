@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import LazyLoad from "react-lazyload";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import API from "../API/api";
 import "../../styles/home-recipe-tiles.css";
-
+import "../../App.css";
 class HomeComp extends Component {
   constructor(props) {
     super(props);
@@ -53,7 +52,7 @@ class HomeComp extends Component {
 
     return (
       <React.Fragment>
-        <div className="container">
+        <div className="container bodyBg">
           <div className="row">
             {console.log("Render")}
             <div className="col-md-12">

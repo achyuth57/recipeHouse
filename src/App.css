@@ -22,7 +22,22 @@
 .App-link {
   color: #61dafb;
 }
-
+.container.bodyBg::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("images/food_bg.jpg");
+  background-repeat: unset;
+  background-size: 20%;
+  opacity: 0.1;
+  filter: alpha(opacity=40);
+  height: 100%;
+  width: 100%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
