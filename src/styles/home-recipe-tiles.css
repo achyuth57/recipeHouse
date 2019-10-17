@@ -155,6 +155,11 @@ h2::after {
 .carousel-inner .row {
   margin: 0;
 }
+.loading-block {
+  text-align: center;
+  width: 100%;
+  min-height: 400px;
+}
 .carousel-indicators li,
 .carousel-indicators li.active {
   width: 10px;
